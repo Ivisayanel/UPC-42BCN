@@ -1,0 +1,17 @@
+# Borrar los anterior comandos en AMPL
+#reset;
+# Cargar el modelo
+#model sensor2.mod;
+# Cargar los datos
+#data sensor2.dat;
+# Indicación a ampl de que se quiere utilizar como solver: CPLEX
+#option solver Gurobi;
+#Resolver
+solve;
+# Mostrar los resultados
+display Total_Flow;
+display FIXED;
+display PROHIBITED;
+display sensor;
+display x;
+display sum{j in INTERS}sensor[j];
