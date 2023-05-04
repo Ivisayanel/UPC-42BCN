@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: isanchez <isanchez@student.42barcel>       +#+  +:+       +#+        */
+/*   By: isanchez <isanchez@42barcelona.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/30 09:57:06 by isanchez          #+#    #+#             */
-/*   Updated: 2023/01/30 09:58:57 by isanchez         ###   ########.fr       */
+/*   Created: 2023/01/24 09:23:29 by isanchez          #+#    #+#             */
+/*   Updated: 2023/04/18 17:19:38 by isanchez         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_fd(int n, int fd)
+int	ft_strlen(const char *s)
 {
-	char	*num;
-	int		len;
+	int	i;
 
-	num = ft_itoa(n);
-	len = ft_strlen(num);
-	write(fd, num, len);
+	i = 0;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
